@@ -60,7 +60,7 @@ def send_sms(config, cc, target, proxy=None):
     if 'headers' in config:
         headers = config['headers']
     try:
-        response = requests.post(url=url, timeout=5, data=data, params=params, json=json_t, headers=headers, proxies=proxy)
+        response = requests.post(url=url, timeout=1, data=data, params=params, json=json_t, headers=headers, proxies=proxy)
         print(response.status_code)
         if response.status_code >= 400:
             print(url)

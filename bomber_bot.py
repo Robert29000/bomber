@@ -55,6 +55,7 @@ def start_count_bombing(cc, target, update: Update, context: CallbackContext, co
             rand_ip = random.choice(tuple(proxies))
             rand_proxy = {"http": rand_ip, "https": rand_ip}
             proxies -= {rand_ip}
+            print(rand_proxy)
 
         config = providers[rand_key]
         del providers[rand_key]
@@ -118,7 +119,7 @@ def select_mode(update: Update, context: CallbackContext) -> None:
     if callback_data == str(DEFAULT):
         threading.Thread(target=start_count_bombing,
                          args=(context.user_data['cc'], context.user_data['target'], update, context)).start()
-        text = Constants.BOMBING_MODE + '\nДоставлено: 0/50 sms'
+        text = Constants.BOMBING_MODE + '\nДоставлено: 0/100 sms'
         update.callback_query.answer()
         update.callback_query.edit_message_text(text=text,
                                                 reply_markup=stop_keyboard)
