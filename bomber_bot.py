@@ -3,6 +3,7 @@ import time
 import random
 import threading
 import os
+import logger
 import Utils
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from telegram.ext import (
@@ -24,6 +25,8 @@ DEFAULT, MEDIUM, HARD, STOP, DONE, RESET = range(4, 10)  # add state REPEAT
 
 stop_buttons = [[InlineKeyboardButton(text='Stop', callback_data=str(STOP))]]
 stop_keyboard = InlineKeyboardMarkup(stop_buttons)
+
+log_helper = logger.get_logger(Constants.LOGGER_NAME)
 
 
 def clear(context: CallbackContext, flag):
@@ -55,7 +58,7 @@ def start_count_bombing(cc, target, update: Update, context: CallbackContext, co
             rand_ip = random.choice(tuple(proxies))
             rand_proxy = {"http": rand_ip, "https": rand_ip}
             proxies -= {rand_ip}
-            print(rand_proxy)
+            log_helper.info(f'changed proxy to {rand_ip}')
 
         config = providers[rand_key]
         del providers[rand_key]
@@ -63,15 +66,14 @@ def start_count_bombing(cc, target, update: Update, context: CallbackContext, co
             res = Utils.send_sms(config, cc, target, rand_proxy)
         else:
             res = Utils.send_sms(config, cc, target)
-
+        if context.user_data["stop_thread"]:
+            return
         if res:
             success += 1
             text = Constants.BOMBING_MODE + '\nДоставлено: %d/%d sms' % (success, count)
             update.callback_query.edit_message_text(text=text, reply_markup=stop_keyboard)
         else:
             fail += 1
-            if context.user_data["stop_thread"]:
-                return
         delay = 1
         time.sleep(delay)
     update.callback_query.edit_message_text(text=Constants.DONE_MESSAGE)

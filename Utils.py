@@ -1,7 +1,11 @@
 import json
 import random
 import requests
+import logger
+import Constants
 from lxml.html import fromstring
+
+log_helper = logger.get_logger(Constants.LOGGER_NAME)
 
 
 def get_services():
@@ -60,11 +64,11 @@ def send_sms(config, cc, target, proxy=None):
     if 'headers' in config:
         headers = config['headers']
     try:
-        response = requests.post(url=url, timeout=1, data=data, params=params, json=json_t, headers=headers, proxies=proxy)
-        print(response.status_code)
+        response = requests.post(url=url, timeout=1, data=data, params=params,
+                                 json=json_t, headers=headers, proxies=proxy)
         if response.status_code >= 400:
-            print(url)
+            log_helper.info(f'request failed {response.status_code} {url}')
         return response.status_code == 200 or response.status_code == 201
     except Exception as e:
-        print(e)
+        log_helper.error(f'error occurred {e} {url} {proxy}')
         return False

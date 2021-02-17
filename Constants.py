@@ -18,3 +18,4 @@ RESET_MESSAGE = ('Target phone number, country code and settings were cleared.\n
 DONE_MESSAGE = 'Bombing is done successfully. Type /start or /reset to use the bot again.'
 STOP_MESSAGE = 'Bombing is stopped successfully. Type /start or /reset to use the bot again.'
 FINISHED_MESSAGE = 'All services were used, please try in 30 minutes. Type /start or /reset to use the bot again.'
+LOGGER_NAME = 'BOMBER_LOG'
